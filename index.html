@@ -12,8 +12,8 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <div class="bg-dark" style="height: 100vh">
+  <body class="bg-dark" style="height: 100vh">
+    <div>
       <!-- Navbar Start -->
       <nav
         class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top"
@@ -87,12 +87,47 @@
 
       <!-- Layout Start -->
       <div class="container-fluid">
-        <h1 class="col-12 text-light pt-4 ps-5">
-          SELAMAT DATANG DI <br />
-          TEMPAT LANGGANAN ISP <br />
-          <span style="color: red">TERBAIK</span>
-          <span style="color: rgb(0, 183, 255)">SEJAGAT RAYA</span>
-        </h1>
+        <!-- Carousel Start -->
+        <div
+          id="carouselExampleRide"
+          class="carousel slide"
+          data-bs-ride="true"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Img/pic1.jpg" class="d-block w-100" alt="pic1" />
+            </div>
+            <div class="carousel-item">
+              <a href="/Paket/Paket Mingguan/index.html">
+                <img src="Img/pic2.jpg" class="d-block w-100" alt="pic2" />
+              </a>
+            </div>
+            <div class="carousel-item">
+              <a href="/Paket/Paket Bulanan/index.html">
+                <img src="Img/pic3.jpg" class="d-block w-100" alt="pic3" />
+              </a>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleRide"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleRide"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- Carousel End -->
       </div>
       <!-- Layout End -->
     </div>
