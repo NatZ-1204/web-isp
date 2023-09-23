@@ -86,27 +86,86 @@
       <!-- Navbar End -->
 
       <!-- Layout Start -->
+      <!-- Form Login Start-->
+
       <div class="container-fluid">
-        <form>
+        <form onsubmit="return validateForm();">
             <div class="mb-3" style="-webkit-text-fill-color: black;">
-              <label for="exampleInputEmail1" class="form-label" style="-webkit-text-fill-color: white;">Alamat Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text" style="-webkit-text-fill-color: white;">Masukan alamat email yang sudah terdaftar. Contoh : abadi.sanjaya@gmail.com</div>
+                <label for="exampleInputEmail1" class="form-label" style="-webkit-text-fill-color: white;">Alamat Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text" style="-webkit-text-fill-color: white;">Masukan alamat email yang sudah terdaftar. Contoh : contoh@gmail.com</div>
             </div>
             <div class="mb-3" style="-webkit-text-fill-color: black;">
-              <label for="exampleInputPassword1" class="form-label" style="-webkit-text-fill-color: white;">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp">
-              <div id="passwordHelp" class="form-text" style="-webkit-text-fill-color: white;"><a href="/">Lupa Password?</a>
-              </div>
+                <label for="exampleInputPassword1" class="form-label" style="-webkit-text-fill-color: white;">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" required>
+                <div id="passwordHelp" class="form-text" style="-webkit-text-fill-color: white;"><a href="/Lupa Password/lupa.html">Lupa Password?</a>
+                </div>
             </div>
             <div class="mb-3 form-check" style="-webkit-text-fill-color: white;">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Saya menyetujui S&K Berlaku.</label>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" for="exampleCheck1">Saya menyetujui S&K Berlaku.</label>
             </div>
-            <button type="submit" class="btn btn-primary"><a class="nav-link active" aria-current="page" href="/">Submit</button></a>
-          </form>
-      </div>
-      <!-- Layout End -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        function validateForm() {
+            // Mendapatkan nilai email, password, dan checkbox
+            var email = document.getElementById("exampleInputEmail1").value;
+            var password = document.getElementById("exampleInputPassword1").value;
+            var isSkChecked = document.getElementById("exampleCheck1").checked;
+    
+            // Validasi formulir
+            if (email.trim() === "" || password.trim() === "") {
+                alert("Form harus diisi!");
+                return false;
+            } else if (!emailIsValid(email) || !passwordIsValid(password)) {
+                alert("Email atau Password Anda salah, harap coba lagi!");
+                return false;
+            } else if (!passwordIsValid(password)) {
+                alert("Password harus minimal 8 karakter atau lebih!");
+                return false;
+            } else if (!isEmailRegistered(email)) {
+                alert("Email Anda belum terdaftar, harap register terlebih dahulu!");
+                return false;
+            } else if (!isSkChecked) {
+                alert("Harap setujui S&K sebelum melanjutkan!");
+                return false;
+            } else {
+                // Semua validasi berhasil, lanjut ke halaman berikutnya
+                window.location.href = "/";
+                return false; // Menghentikan pengiriman formulir
+            }
+        }
+    
+        function emailIsValid(email) {
+            // Contoh validasi sederhana, Anda dapat menggunakan validasi yang lebih canggih
+            var validEmail = "contoh@gmail.com";
+            return email === validEmail;
+        }
+    
+        function passwordIsValid(password) {
+            // Contoh validasi sederhana, Anda dapat menyesuaikan sesuai kebutuhan
+            var validPassword = "12345678";
+            return password.length >= 8; password === validPassword; // Misalnya, memeriksa apakah password memiliki panjang minimal 6 karakter
+        }
+    
+        function isEmailRegistered(email) {
+            // Contoh fungsi yang memeriksa apakah email sudah terdaftar
+            // Anda perlu mengimplementasikan logika ini sesuai dengan database atau sumber data Anda
+            // Misalnya, dapat mengirim permintaan HTTP ke server Anda untuk memeriksa keberadaan email
+            // dan server Anda akan memberikan respons sesuai hasilnya.
+            // Contoh:
+            // var xhr = new XMLHttpRequest();
+            // xhr.open("GET", "/check-email?email=" + encodeURIComponent(email), false);
+            // xhr.send();
+            // return xhr.status === 200; // Jika status 200, email sudah terdaftar
+            // Catatan: Ini hanya simulasi, sebaiknya Anda mengimplementasikannya dengan lebih baik dan aman.
+            return true; // Misalnya, kita anggap email selalu terdaftar
+        }
+    </script>
+    
 
     </div>
   </body>
