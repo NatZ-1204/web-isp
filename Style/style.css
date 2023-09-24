@@ -3,6 +3,26 @@
   display: flex;
   justify-content: center;
 }
+.center-btn {
+  /* Membuat posisi Button ke tengah */
+  width: 20cm;
+}
+
+.link-btn {
+  /* Menghilangkan warna link pada button */
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-txt {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s; /* Menambahkan efek transisi pada perubahan warna */
+}
+
+.link-txt:hover {
+  color: red; /* Ganti warna teks saat kursor dihover */
+}
 
 .position-form {
   /* Mengatur posisi konten form isian */
@@ -19,4 +39,30 @@
 .rata-kanan-link-signup {
   /* Mengatur posisi Link SignUp pada form login menjadi tengah */
   text-align: center;
+}
+.button-container {
+  display: flex;
+  align-items: center; /* Pusatkan vertikal */
+  justify-content: flex-end; /* Letakkan tombol di sebelah kiri */
+  gap: 15px; /* Jarak antara tombol dan emoji */
+}
+.custom-button {
+  height: 33px; /* Sesuaikan tinggi tombol dengan tinggi header */
+  width: 85px; /* Sesuaikan lebar tombol sesuai kebutuhan */
+}
+.emoji {
+  font-size: 20px; /* Ukuran emoji */
+  animation: bounce 2s infinite; /* Gunakan animasi 'bounce' selama 2 detik, ulangin tak terbatas */
+}
+
+@keyframes bounce {
+  0%,
+  0% {
+    transform: translateX(
+      0
+    ); /* Titik awal dan akhir, tidak ada perubahan vertikal */
+  }
+  45% {
+    transform: translateX(-10px); /* Tengah animasi, mengangkat emoji ke atas */
+  }
 }
