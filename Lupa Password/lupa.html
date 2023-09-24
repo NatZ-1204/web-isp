@@ -11,6 +11,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="/Style/style.css" />
   </head>
   <body class="bg-dark" style="height: 100vh">
     <div>
@@ -89,52 +90,67 @@
       <!-- Form Login Start-->
       <div class="container-fluid">
         <form onsubmit="return validateEmail();">
-            <div class="mb-4" style="-webkit-text-fill-color: black">
-              <label for="exampleInputEmail1" class="form-label" style="-webkit-text-fill-color: white">Masukkan alamat Email anda</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text" style="-webkit-text-fill-color: white;">Masukan alamat email untuk konfirmasi reset password.</div>
+          <div class="mb-4" style="-webkit-text-fill-color: black">
+            <label
+              for="exampleInputEmail1"
+              class="form-label"
+              style="-webkit-text-fill-color: white"
+              >Masukkan alamat Email anda</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div
+              id="emailHelp"
+              class="form-text"
+              style="-webkit-text-fill-color: white"
+            >
+              Masukan alamat email untuk konfirmasi reset password.
             </div>
-            <button type="submit" class="btn btn-primary">Cek Email</button>
-          </form>
+          </div>
+          <button type="submit" class="btn btn-primary">Cek Email</button>
+        </form>
       </div>
 
       <script>
         function validateEmail() {
-            // Mendapatkan nilai email dari input
-            var email = document.getElementById("exampleInputEmail1").value;
-            
-            // Validasi email (contoh sederhana, Anda dapat menyesuaikan dengan validasi yang lebih kompleks)
-            if (emailIsValid(email)) {
-                // Email benar, lanjut ke halaman berikutnya
-                window.location.href = "/Lupa Password/emailok.html";
-                return false; // Menghentikan pengiriman formulir
-            } else {
-                // Email salah, tampilkan pesan atau peringatan
-                alert("Alamat email tidak valid. Harap periksa kembali.");
-                return false; // Menghentikan pengiriman formulir
-            }
+          // Mendapatkan nilai email dari input
+          var email = document.getElementById("exampleInputEmail1").value;
+
+          // Validasi email (contoh sederhana, Anda dapat menyesuaikan dengan validasi yang lebih kompleks)
+          if (emailIsValid(email)) {
+            // Email benar, lanjut ke halaman berikutnya
+            window.location.href = "/Lupa Password/emailok.html";
+            return false; // Menghentikan pengiriman formulir
+          } else {
+            // Email salah, tampilkan pesan atau peringatan
+            alert("Alamat email tidak valid. Harap periksa kembali.");
+            return false; // Menghentikan pengiriman formulir
+          }
         }
-        
+
         function emailIsValid(email) {
-            // Ganti pola regular expression dengan alamat email yang benar
-            var validEmail = "contoh@gmail.com";
-            return email === validEmail;
+          // Ganti pola regular expression dengan alamat email yang benar
+          var validEmail = "contoh@gmail.com";
+          return email === validEmail;
         }
 
-
-            // function emailIsValid(email) {
-            //     // Contoh validasi sederhana, Anda dapat menggunakan validasi yang lebih canggih
-            //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-            // } 
-        </script>
+        // function emailIsValid(email) {
+        //     // Contoh validasi sederhana, Anda dapat menggunakan validasi yang lebih canggih
+        //     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        // }
+      </script>
 
       <!-- Form Login End-->
       <!-- Layout End -->
-
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous">
-    </script>
+    crossorigin="anonymous"
+  ></script>
 </html>

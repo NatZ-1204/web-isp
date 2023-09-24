@@ -1,0 +1,22 @@
+.center-div {
+  /* Membuat posisi menjadi ke tengah tanpa merubah posisi konten lainnya */
+  display: flex;
+  justify-content: center;
+}
+
+.position-form {
+  /* Mengatur posisi konten form isian */
+  text-align: left;
+  margin: auto;
+}
+
+.input-box {
+  /* Mengatur panjang dan lebar kotak form isian */
+  width: 450px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+.rata-kanan-link-signup {
+  /* Mengatur posisi Link SignUp pada form login menjadi tengah */
+  text-align: center;
+}
