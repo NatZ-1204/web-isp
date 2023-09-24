@@ -1,3 +1,31 @@
+input[type="email"],
+input[type="password"],
+input[type="namadepan"],
+input[type="namabelakang"],
+input[type="search"],
+textarea {
+  height: 40px;
+  width: 100%;
+  border: none;
+  background: #f4f4f4;
+  border-bottom: 2px solid #eee;
+  color: #354052;
+  padding: 0px 10px;
+  opacity: 0.3;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="namadepan"]:focus,
+input[type="namabelakang"]:focus,
+input[type="search"]:focus,
+button[type="submit"]:focus,
+textarea:focus {
+  opacity: 1;
+}
+
 .center-div {
   /* Membuat posisi menjadi ke tengah tanpa merubah posisi konten lainnya */
   display: flex;
