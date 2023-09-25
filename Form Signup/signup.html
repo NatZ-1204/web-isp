@@ -20,7 +20,14 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">NATZ</a>
+          <a class="navbar-brand" href="/"
+            ><img
+              src="/Img/Logo1.png"
+              alt="Logo NATZ"
+              width="75px"
+              height="75px"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -34,48 +41,18 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"></li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"
-                  >Dashboard</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Tentang/">Tentang</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Paket
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="/Paket/Paket Mingguan/"
-                      >Paket Mingguan</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Paket/Paket Bulanan/"
-                      >Paket Bulanan</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="/S&K/">Syarat & Ketentuan</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/Form Login/index.html"
-                  >Login</a
-                >
+                <div class="button-container">
+                  <button
+                    class="btn btn-outline-light custom-button"
+                    type="signup"
+                    style="height: fit-content"
+                    onclick="window.location.href = '/Form Login/index.html'"
+                  >
+                    <a class="link-btn" href="/Form Login/index.html">Login</a>
+                  </button>
+                </div>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -104,10 +81,11 @@
               >Nama Depan</label
             >
             <input
-              type="nama"
+              type="namadepan"
               class="form-control"
               id="exampleInputnama1"
               aria-describedby="namaHelp"
+              placeholder="Andi"
             />
             <div
               id="namaHelp"
@@ -125,10 +103,11 @@
               >Nama Belakang</label
             >
             <input
-              type="nama"
+              type="namabelakang"
               class="form-control"
               id="exampleInputNama2"
               aria-describedby="namaHelp"
+              placeholder="Supardi"
             />
             <div
               id="namaHelp"
@@ -150,6 +129,7 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              placeholder="example@gmail.com"
             />
             <div
               id="emailHelp"
@@ -171,6 +151,7 @@
               class="form-control"
               id="exampleInputPassword1"
               aria-describedby="passwordHelp"
+              placeholder="Password"
             />
             <div
               id="passwordHelp"
@@ -192,8 +173,8 @@
               >Saya menyetujui S&K Berlaku.</label
             >
           </div>
-          <button type="submit" class="btn btn-primary">
-            <a class="nav-link active" aria-current="page" href="/">Submit</a>
+          <button type="submit-signup" class="btn btn-primary">
+            <a class="nav-link active" aria-current="page" href="/">Sign Up</a>
           </button>
         </form>
       </div>

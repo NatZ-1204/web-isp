@@ -20,7 +20,14 @@
         class="navbar navbar-expand-lg navbar-dark bg-dark text-light sticky-top"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">NATZ</a>
+          <a class="navbar-brand" href="/"
+            ><img
+              src="/Img/Logo1.png"
+              alt="Logo NATZ"
+              width="75px"
+              height="75px"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -35,46 +42,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/"
-                  >Dashboard</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Tentang/">Tentang</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Paket
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="/Paket/Paket Mingguan/"
-                      >Paket Mingguan</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Paket/Paket Bulanan/"
-                      >Paket Bulanan</a
-                    >
-                  </li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="/S&K/">Syarat & Ketentuan</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
                 <div class="button-container">
                   <button
                     class="btn btn-outline-light custom-button"
-                    type="submit"
+                    type="signup"
                     style="height: fit-content"
+                    onclick="window.location.href = '/Form Signup/signup.html'"
                   >
                     <a class="link-btn" href="/Form Signup/signup.html"
                       >Sign Up</a
@@ -122,6 +95,7 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               required
+              placeholder="example@gmail.com"
             />
             <div
               id="emailHelp"
@@ -148,6 +122,7 @@
               id="exampleInputPassword1"
               aria-describedby="passwordHelp"
               required
+              placeholder="Password"
             />
             <div
               id="passwordHelp"
@@ -171,7 +146,7 @@
             >
           </div>
           <div class="nav-item" style="display: flex; justify-content: center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit-login" class="btn btn-primary">Login</button>
           </div>
         </form>
       </div>
