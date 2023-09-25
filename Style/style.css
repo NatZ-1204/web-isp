@@ -1,3 +1,43 @@
+/* Menerapkan outline ke navbar */
+.custom-navbar {
+  border: 2px solid #ffffff; /* Warna outline dan ketebalan */
+  border-radius: 10px; /* Sudut outline */
+  margin-bottom: 20px; /* Jarak dari elemen di bawahnya */
+  height: 50px; /* Mengatur ukuran tinggi navbar */
+}
+
+/* Mengurangi padding dalam navbar */
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-brand {
+  padding-top: 5px; /* Atur padding atas sesuai kebutuhan */
+  padding-bottom: 5px; /* Atur padding bawah sesuai kebutuhan */
+}
+
+/* Mengubah warna latar belakang navbar */
+.custom-navbar .navbar {
+  background-color: #c5c5c5; /* Warna latar belakang navbar */
+}
+
+/* Mengubah warna teks link navbar */
+.custom-navbar .navbar-nav .nav-link {
+  color: #ffffff; /* Warna teks link */
+}
+
+/* Mengubah warna link saat dihover */
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #ff0000; /* Warna teks link saat dihover */
+}
+
+/* Mengubah warna teks brand */
+.custom-navbar .navbar-brand {
+  color: #ffffff; /* Warna teks brand */
+}
+
+/* Mengubah warna teks brand saat dihover */
+.custom-navbar .navbar-brand:hover {
+  color: #ff0000; /* Warna teks brand saat dihover */
+}
+
 input[type="email"],
 input[type="password"],
 input[type="namadepan"],
